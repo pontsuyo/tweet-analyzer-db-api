@@ -1,7 +1,7 @@
 package com.pontsuyo.tweet.analyzer.db.api.domain.service;
 
 import com.pontsuyo.tweet.analyzer.db.api.domain.model.Tweet;
-import com.pontsuyo.tweet.analyzer.db.api.repository.TweetRepository;
+import com.pontsuyo.tweet.analyzer.db.api.domain.repository.TweetRepository;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ public class TweetService {
   }
 
   public List<Tweet> get() {
-    return tweetRepository.get();
+    return tweetRepository.getTweets();
   }
 }
