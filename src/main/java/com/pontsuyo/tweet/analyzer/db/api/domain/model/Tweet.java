@@ -2,6 +2,8 @@ package com.pontsuyo.tweet.analyzer.db.api.domain.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import com.pontsuyo.tweet.analyzer.db.api.infrastructure.model.InfraTweet;
 import java.io.Serializable;
 import java.util.Collections;
@@ -14,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Getter
 @Setter
+@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 @Builder
 public class Tweet implements Serializable {
 
