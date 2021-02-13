@@ -1,20 +1,23 @@
 package com.pontsuyo.tweet.analyzer.db.api.domain.service;
 
 import com.pontsuyo.tweet.analyzer.db.api.domain.model.Tweet;
-import com.pontsuyo.tweet.analyzer.db.api.domain.repository.TweetRepository;
+import com.pontsuyo.tweet.analyzer.db.api.infrastructure.repository.DynamoDBRepository;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 @Service
 public class TweetService {
 
-  private final TweetRepository tweetRepository;
+  private final DynamoDBRepository dynamoDBRepository;
 
-  public TweetService(TweetRepository tweetRepository) {
-    this.tweetRepository = tweetRepository;
+  public TweetService(DynamoDBRepository dynamoDBRepository) {
+    this.dynamoDBRepository = dynamoDBRepository;
   }
 
   public List<Tweet> get() {
-    return tweetRepository.getTweets();
+    return dynamoDBRepository.findAll().stream()
+        .map(Tweet::fromInfraTweet)
+        .collect(Collectors.toList());
   }
 }
