@@ -31,28 +31,4 @@ public class InfraTweet implements Serializable {
 
   @DynamoDBAttribute(attributeName = "image_urls")
   private String imageUrls;
-
-//  private Tweet fromRecord(HashMap<String, AttributeValue> map) {
-//    map.entrySet().stream()
-//        .collect(Collectors.toMap(entry -> entry.getKey(), entry -> parseAttributeValue(entry.getValue())))
-//
-//    return null;
-//  }
-//
-//  /**
-//   * DynamoDBデータから変換する
-//   *
-//   * @param attributeValue
-//   * @return
-//   */
-//  private Object parseAttributeValue(AttributeValue attributeValue) {
-//    if (attributeValue.getValueForField("N", Long.class).isPresent()) {
-//      return attributeValue.getValueForField("N", Long.class).get();
-//    }
-//    if (attributeValue.getValueForField("S", String.class).isPresent()) {
-//      return attributeValue.getValueForField("S", String.class).get();
-//    }
-//    log.error("想定外のデータ型です");
-//    return null;
-//  }
 }
