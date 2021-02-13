@@ -93,6 +93,7 @@ dependencies {
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    implementation 'com.github.derjust:spring-data-dynamodb:5.1.0'
 
     compile("org.springframework.boot:spring-boot-starter-web")
 
