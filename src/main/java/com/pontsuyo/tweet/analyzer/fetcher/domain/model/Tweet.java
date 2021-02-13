@@ -1,10 +1,10 @@
-package com.pontsuyo.tweet.analyzer.db.api.domain.model;
+package com.pontsuyo.tweet.analyzer.fetcher.domain.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import com.pontsuyo.tweet.analyzer.db.api.infrastructure.model.InfraTweet;
+import com.pontsuyo.tweet.analyzer.fetcher.infrastructure.model.InfraTweet;
 import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;

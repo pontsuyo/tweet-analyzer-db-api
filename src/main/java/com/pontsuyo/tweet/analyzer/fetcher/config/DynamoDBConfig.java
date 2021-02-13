@@ -1,4 +1,4 @@
-package com.pontsuyo.tweet.analyzer.db.api.config;
+package com.pontsuyo.tweet.analyzer.fetcher.config;
 
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
 import com.amazonaws.regions.Regions;

@@ -1,4 +1,4 @@
-package com.pontsuyo.tweet.analyzer.db.api;
+package com.pontsuyo.tweet.analyzer.fetcher;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -5,4 +5,4 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = 'tweet-analyzer-db-api'
+rootProject.name = 'tweet-analyzer-fetcher'

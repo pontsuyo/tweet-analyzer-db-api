@@ -1,4 +1,4 @@
-package com.pontsuyo.tweet.analyzer.db.api.infrastructure.model;
+package com.pontsuyo.tweet.analyzer.fetcher.infrastructure.model;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
