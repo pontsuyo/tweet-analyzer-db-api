@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@EnableDynamoDBRepositories(basePackages = "com.pontsuyo.tweet.analyzer.db.api.infrastructure.repository")
+@EnableDynamoDBRepositories(basePackages = "com.pontsuyo.tweet.analyzer.fetcher.infrastructure.repository")
 public class DynamoDBConfig {
 
   /**
