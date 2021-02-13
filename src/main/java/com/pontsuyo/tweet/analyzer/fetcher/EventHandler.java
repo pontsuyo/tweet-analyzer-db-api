@@ -1,4 +1,4 @@
-package com.pontsuyo.tweet.analyzer.db.api;
+package com.pontsuyo.tweet.analyzer.fetcher;
 
 import org.springframework.cloud.function.adapter.aws.SpringBootRequestHandler;
 

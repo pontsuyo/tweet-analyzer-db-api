@@ -1,6 +1,6 @@
-package com.pontsuyo.tweet.analyzer.db.api.infrastructure.repository;
+package com.pontsuyo.tweet.analyzer.fetcher.infrastructure.repository;
 
-import com.pontsuyo.tweet.analyzer.db.api.infrastructure.model.InfraTweet;
+import com.pontsuyo.tweet.analyzer.fetcher.infrastructure.model.InfraTweet;
 import java.util.List;
 import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.springframework.data.repository.CrudRepository;

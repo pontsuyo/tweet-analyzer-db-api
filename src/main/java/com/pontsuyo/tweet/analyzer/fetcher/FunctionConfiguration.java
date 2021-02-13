@@ -1,13 +1,12 @@
-package com.pontsuyo.tweet.analyzer.db.api;
+package com.pontsuyo.tweet.analyzer.fetcher;
 
-import com.pontsuyo.tweet.analyzer.db.api.domain.model.Tweet;
-import com.pontsuyo.tweet.analyzer.db.api.domain.service.TweetService;
+import com.pontsuyo.tweet.analyzer.fetcher.domain.model.Tweet;
+import com.pontsuyo.tweet.analyzer.fetcher.domain.service.TweetService;
 import java.util.List;
 import java.util.function.Function;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.ResponseEntity;
 
 @SpringBootApplication
 public class FunctionConfiguration {
