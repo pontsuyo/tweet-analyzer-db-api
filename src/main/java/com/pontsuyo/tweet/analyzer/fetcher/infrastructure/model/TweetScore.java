@@ -11,24 +11,18 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Data
 @NoArgsConstructor
-@DynamoDBTable(tableName = "tweet-analyzer")
-public class InfraTweet implements Serializable {
+@DynamoDBTable(tableName = "tweet-analyzer-score")
+public class TweetScore implements Serializable {
 
   @DynamoDBHashKey(attributeName = "tweet_id")
   private Long tweetId;
 
-  @DynamoDBAttribute(attributeName = "user_id")
-  private Long userId;
-
-  @DynamoDBAttribute(attributeName = "text")
-  private String text;
+  @DynamoDBHashKey(attributeName = "time")
+  private Long time;
 
   @DynamoDBAttribute(attributeName = "favorite_count")
   private Integer favoriteCount;
 
   @DynamoDBAttribute(attributeName = "retweet_count")
   private Integer retweetCount;
-
-  @DynamoDBAttribute(attributeName = "image_urls")
-  private String imageUrls;
 }
