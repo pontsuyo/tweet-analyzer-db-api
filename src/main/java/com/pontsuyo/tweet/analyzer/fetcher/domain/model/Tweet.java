@@ -28,11 +28,9 @@ public class Tweet implements Serializable {
 
   private final String text;
 
-  // map<time, count>
-  private final List<Map<Long, Integer>> favoriteCount;
+  private final List<Map<String, Long>> favoriteCount;
 
-  // map<time, count>
-  private final List<Map<Long, Integer>> retweetCount;
+  private final List<Map<String, Long>> retweetCount;
 
   private final List<String> imageUrls;
 
