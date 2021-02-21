@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Data
 @NoArgsConstructor
-@DynamoDBTable(tableName = "tweet-analyzer")
+@DynamoDBTable(tableName = "tweet-analyzer-feature")
 public class TweetFeature implements Serializable {
 
   @DynamoDBHashKey(attributeName = "tweet_id")
