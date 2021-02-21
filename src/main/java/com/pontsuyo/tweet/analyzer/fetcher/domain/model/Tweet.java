@@ -4,10 +4,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
-import com.pontsuyo.tweet.analyzer.fetcher.infrastructure.model.InfraTweet;
+import com.pontsuyo.tweet.analyzer.fetcher.infrastructure.model.ScoreLists;
+import com.pontsuyo.tweet.analyzer.fetcher.infrastructure.model.TweetFeature;
 import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,20 +28,20 @@ public class Tweet implements Serializable {
 
   private final String text;
 
-  private final Integer favoriteCount;
+  private final List<Map<String, Long>> favoriteCount;
 
-  private final Integer retweetCount;
+  private final List<Map<String, Long>> retweetCount;
 
   private final List<String> imageUrls;
 
-  public static Tweet fromInfraTweet(InfraTweet infraTweet) {
+  public static Tweet assembleFeatureAndScore(TweetFeature feature, ScoreLists scoreLists) {
     return Tweet.builder()
-        .tweetId(infraTweet.getTweetId())
-        .userId(infraTweet.getUserId())
-        .text(infraTweet.getText())
-        .favoriteCount(infraTweet.getFavoriteCount())
-        .retweetCount(infraTweet.getRetweetCount())
-        .imageUrls(getList(infraTweet.getImageUrls()))
+        .tweetId(feature.getTweetId())
+        .userId(feature.getUserId())
+        .text(feature.getText())
+        .favoriteCount(scoreLists.getFavoriteCount())
+        .retweetCount(scoreLists.getRetweetCount())
+        .imageUrls(getList(feature.getImageUrls()))
         .build();
   }
 
