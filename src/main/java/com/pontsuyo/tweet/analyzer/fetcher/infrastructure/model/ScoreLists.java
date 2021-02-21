@@ -12,8 +12,8 @@ import lombok.Getter;
 public class ScoreLists {
 
   static final String TIME_KEY = "time";
-  static final String FAVORITE_COUNT_KEY = "favorite_count";
-  static final String RETWEET_COUNT_KEY = "retweet_count";
+  static final String FAVORITE_COUNT_KEY = "count";
+  static final String RETWEET_COUNT_KEY = "count";
 
   private List<Map<String, Long>> favoriteCount;
 
