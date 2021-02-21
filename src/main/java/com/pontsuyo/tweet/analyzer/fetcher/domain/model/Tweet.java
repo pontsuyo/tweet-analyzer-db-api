@@ -28,9 +28,9 @@ public class Tweet implements Serializable {
 
   private final String text;
 
-  private final List<Map<String, Long>> favoriteCount;
+  private final List<Map<String, Long>> favorite;
 
-  private final List<Map<String, Long>> retweetCount;
+  private final List<Map<String, Long>> retweet;
 
   private final List<String> imageUrls;
 
@@ -39,8 +39,8 @@ public class Tweet implements Serializable {
         .tweetId(feature.getTweetId())
         .userId(feature.getUserId())
         .text(feature.getText())
-        .favoriteCount(scoreLists.getFavoriteCount())
-        .retweetCount(scoreLists.getRetweetCount())
+        .favorite(scoreLists.getFavoriteCount())
+        .retweet(scoreLists.getRetweetCount())
         .imageUrls(getList(feature.getImageUrls()))
         .build();
   }
