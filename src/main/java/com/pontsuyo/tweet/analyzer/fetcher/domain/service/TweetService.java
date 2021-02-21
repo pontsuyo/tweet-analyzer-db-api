@@ -23,6 +23,8 @@ public class TweetService {
 
   public List<Tweet> get() {
     var scores = dynamoDBScoreRepository.findAll();
+
+    // store score fields in each field
     var tweets = dynamoDBFeatureRepository.findAll().stream()
         .map(feature -> {
           var tweetId = feature.getTweetId();
